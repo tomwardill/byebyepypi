@@ -5,7 +5,7 @@ import tornado.web
 import requests
 
 from byebyepypi import settings
-from Storage import Storage
+from storage import Storage
 
 class ListHandler(tornado.web.RequestHandler):
     

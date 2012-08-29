@@ -3,7 +3,7 @@ import logging
 import tornado.web
 import tornado.options
 import simplejson as json
-from byebyepypi.Handlers import IndexHandler, DebugHandler, ListHandler, CacheHandler
+from byebyepypi.handlers import IndexHandler, DebugHandler, ListHandler, CacheHandler
 
 def run(host, port):
     """ Run the server until killed
