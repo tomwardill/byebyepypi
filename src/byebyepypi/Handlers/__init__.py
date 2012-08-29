@@ -1,1 +1,3 @@
 from IndexHandler import IndexHandler
+from DebugHandler import DebugHandler
+from EggHandler import EggHandler
