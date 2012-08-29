@@ -18,7 +18,7 @@ class ListHandler(tornado.web.RequestHandler):
                 return
             
         
-        r = requests.get(settings.PYPI_URL + egg)
+        r = requests.get(settings.PYPI_INDEX_URL + egg)
         if (r.status_code > 200):
             raise tornado.web.HTTPError(r.status_code)
         
