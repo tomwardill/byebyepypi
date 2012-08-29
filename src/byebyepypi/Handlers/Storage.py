@@ -12,3 +12,7 @@ class Storage(object):
         if cls.request_cache.has_key(egg):
             return cls.request_cache[egg]
         return None
+    
+    @classmethod
+    def clear_cache(cls):
+        cls.request_cache = {}
