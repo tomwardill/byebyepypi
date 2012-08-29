@@ -1,6 +1,7 @@
 import logging
 
 import tornado.web
+import tornado.options
 import simplejson as json
 from byebyepypi.Handlers import IndexHandler, DebugHandler, ListHandler, CacheHandler
 
@@ -14,5 +15,6 @@ def run(host, port):
         (r'/cache/([A-z0-9]+)[/]?', CacheHandler),
         (r'.*', DebugHandler),
         ])
+    tornado.options.parse_command_line()
     application.listen(port=port, address=host)
     tornado.ioloop.IOLoop.instance().start()
