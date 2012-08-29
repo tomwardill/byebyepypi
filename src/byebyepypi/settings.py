@@ -1,0 +1,1 @@
+PYPI_URL = 'http://pypi.python.org/simple/'

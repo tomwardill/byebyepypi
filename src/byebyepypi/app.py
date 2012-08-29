@@ -2,7 +2,7 @@ import logging
 
 import tornado.web
 import simplejson as json
-from byebyepypi.Handlers import IndexHandler, DebugHandler, EggHandler
+from byebyepypi.Handlers import IndexHandler, DebugHandler, ListHandler
 
 def run(host, port):
     """ Run the server until killed
@@ -10,7 +10,7 @@ def run(host, port):
     
     application = tornado.web.Application([
         (r'/', IndexHandler),
-        (r'/index/([A-z0-9]+)[/]?', EggHandler),
+        (r'/index/([A-z0-9\.]+)[/]?', ListHandler),
         (r'.*', DebugHandler),
         ])
     application.listen(port=port, address=host)
