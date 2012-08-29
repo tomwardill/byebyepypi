@@ -1,6 +1,6 @@
 import tornado.web
 
-from Storage import Storage
+from storage import Storage
 
 class CacheHandler(tornado.web.RequestHandler):
     """ View and clear the cache

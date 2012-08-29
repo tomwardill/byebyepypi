@@ -9,7 +9,6 @@ from storage import Storage
 
 class ListHandler(tornado.web.RequestHandler):
     
-    
     def get(self, egg):
         logging.info('REQUESTED: ' + egg)
         
